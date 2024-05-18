@@ -1,0 +1,14 @@
+D:\ProgrammingProjects\C#Projects\RiderProjects\CsAutoGui\CsAutoGUI\bin\Debug\net8.0\CsAutoGUI.exe
+D:\ProgrammingProjects\C#Projects\RiderProjects\CsAutoGui\CsAutoGUI\bin\Debug\net8.0\CsAutoGUI.deps.json
+D:\ProgrammingProjects\C#Projects\RiderProjects\CsAutoGui\CsAutoGUI\bin\Debug\net8.0\CsAutoGUI.runtimeconfig.json
+D:\ProgrammingProjects\C#Projects\RiderProjects\CsAutoGui\CsAutoGUI\bin\Debug\net8.0\CsAutoGUI.dll
+D:\ProgrammingProjects\C#Projects\RiderProjects\CsAutoGui\CsAutoGUI\bin\Debug\net8.0\CsAutoGUI.pdb
+D:\ProgrammingProjects\C#Projects\RiderProjects\CsAutoGui\CsAutoGUI\obj\Debug\net8.0\CsAutoGUI.GeneratedMSBuildEditorConfig.editorconfig
+D:\ProgrammingProjects\C#Projects\RiderProjects\CsAutoGui\CsAutoGUI\obj\Debug\net8.0\CsAutoGUI.AssemblyInfoInputs.cache
+D:\ProgrammingProjects\C#Projects\RiderProjects\CsAutoGui\CsAutoGUI\obj\Debug\net8.0\CsAutoGUI.AssemblyInfo.cs
+D:\ProgrammingProjects\C#Projects\RiderProjects\CsAutoGui\CsAutoGUI\obj\Debug\net8.0\CsAutoGUI.csproj.CoreCompileInputs.cache
+D:\ProgrammingProjects\C#Projects\RiderProjects\CsAutoGui\CsAutoGUI\obj\Debug\net8.0\CsAutoGUI.dll
+D:\ProgrammingProjects\C#Projects\RiderProjects\CsAutoGui\CsAutoGUI\obj\Debug\net8.0\refint\CsAutoGUI.dll
+D:\ProgrammingProjects\C#Projects\RiderProjects\CsAutoGui\CsAutoGUI\obj\Debug\net8.0\CsAutoGUI.pdb
+D:\ProgrammingProjects\C#Projects\RiderProjects\CsAutoGui\CsAutoGUI\obj\Debug\net8.0\CsAutoGUI.genruntimeconfig.cache
+D:\ProgrammingProjects\C#Projects\RiderProjects\CsAutoGui\CsAutoGUI\obj\Debug\net8.0\ref\CsAutoGUI.dll
