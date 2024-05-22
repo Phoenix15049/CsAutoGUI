@@ -7,5 +7,4 @@ public class MainTest
         CsAutoGui cs = new CsAutoGui();
         Console.WriteLine(cs.position());
     }
-    //Aya khayemali?
 }
