@@ -12,3 +12,4 @@ D:\ProgrammingProjects\C#Projects\RiderProjects\CsAutoGui\CsAutoGUI\obj\Debug\ne
 D:\ProgrammingProjects\C#Projects\RiderProjects\CsAutoGui\CsAutoGUI\obj\Debug\net8.0\CsAutoGUI.pdb
 D:\ProgrammingProjects\C#Projects\RiderProjects\CsAutoGui\CsAutoGUI\obj\Debug\net8.0\CsAutoGUI.genruntimeconfig.cache
 D:\ProgrammingProjects\C#Projects\RiderProjects\CsAutoGui\CsAutoGUI\obj\Debug\net8.0\ref\CsAutoGUI.dll
+D:\ProgrammingProjects\C#Projects\RiderProjects\CsAutoGui\CsAutoGUI\obj\Debug\net8.0\CsAutoGUI.sourcelink.json
