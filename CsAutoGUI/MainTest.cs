@@ -5,7 +5,8 @@ public class MainTest
     static void Main(string[] args)
     {
         CsAutoGui c = new CsAutoGui();
-        Console.WriteLine(c.size());
+        c.move(500, 500,1);
+        Console.WriteLine();
         
     }
 }

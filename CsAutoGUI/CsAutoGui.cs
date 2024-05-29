@@ -7,54 +7,42 @@ public class CsAutoGui
     private static double PAUSE = 0.0;
     
     [DllImport("user32.dll")]
+    static extern bool SetCursorPos(int X, int Y);
+    
+    [DllImport("user32.dll")]
     private static extern bool GetCursorPos(out Point lpPoint);
-
     [DllImport("user32.dll")]
     private static extern int GetSystemMetrics(int nIndex);
-
-    [DllImport("gdi32.dll")]
-    static extern int GetDeviceCaps(IntPtr hdc, int nIndex);
-
-    public const int LOGPIXELSX = 88;
-    public const int LOGPIXELSY = 90;
-
+    
+    
     public Point size()
     {
-        IntPtr desktop = GetDC(IntPtr.Zero);
-        int LogicalScreenHeight = GetSystemMetrics(1);
-        int PhysicalScreenHeight = GetDeviceCaps(desktop, LOGPIXELSY);
-        float ScreenScalingFactor = (float)PhysicalScreenHeight / (float)LogicalScreenHeight;
-
-        int width = (int)(GetSystemMetrics(0) * ScreenScalingFactor);
-        int height = (int)(GetSystemMetrics(1) * ScreenScalingFactor);
-
-        ReleaseDC(IntPtr.Zero, desktop);
-
-        return new Point(width, height);
+        return new Point(GetSystemMetrics(0), GetSystemMetrics(1));
     }
-
+    
     public Point position()
     {
         GetCursorPos(out Point point);
-
-        IntPtr desktop = GetDC(IntPtr.Zero);
-        int LogicalScreenHeight = GetSystemMetrics(1);
-        int PhysicalScreenHeight = GetDeviceCaps(desktop, LOGPIXELSY);
-        float ScreenScalingFactor = (float)PhysicalScreenHeight / (float)LogicalScreenHeight;
-
-        point.X = (int)(point.X * ScreenScalingFactor);
-        point.Y = (int)(point.Y * ScreenScalingFactor);
-
-        ReleaseDC(IntPtr.Zero, desktop);
-
         return point;
     }
-
-    [DllImport("user32.dll", SetLastError = true)]
-    static extern IntPtr GetDC(IntPtr hWnd);
-
-    [DllImport("user32.dll", SetLastError = true)]
-    static extern int ReleaseDC(IntPtr hWnd, IntPtr hDC);
+    
+    public void move(int x, int y, double Delay = 0.0,int steps = 100)
+    {
+        // Increase Steps this for more 'smooth' movement
+        double DelayInMs = Delay * 1000;
+        
+        GetCursorPos(out Point currentPoint);
+         
+        int sleepTime = (int)DelayInMs / steps;
+        for (int i = 0; i < steps; i++)
+        {
+            int tempX = currentPoint.X + (x - currentPoint.X) * i / steps;
+            int tempY = currentPoint.Y + (y - currentPoint.Y) * i / steps;
+            SetCursorPos(tempX, tempY);
+            Thread.Sleep(sleepTime);
+        }
+        SetCursorPos(x, y); // Ensure the cursor ends up at the exact spot
+    }
 
     public bool onScreen(int x, int y)
     {
