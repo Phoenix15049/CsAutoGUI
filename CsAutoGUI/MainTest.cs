@@ -5,8 +5,10 @@ public class MainTest
     static void Main(string[] args)
     {
         CsAutoGui c = new CsAutoGui();
-        c.move(500, 500,1);
-        Console.WriteLine();
+        Console.WriteLine(c.size());
+        c.move(0, 0,0.5);
+
+        
         
     }
 }

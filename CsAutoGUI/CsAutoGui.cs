@@ -26,7 +26,7 @@ public class CsAutoGui
         return point;
     }
     
-    public void move(int x, int y, double Delay = 0.0,int steps = 100)
+    public void move(int x, int y, double Delay = 0.0,int steps = 25)
     {
         // Increase Steps this for more 'smooth' movement
         double DelayInMs = Delay * 1000;
