@@ -6,9 +6,7 @@ public class MainTest
     {
         CsAutoGui c = new CsAutoGui();
         Console.WriteLine(c.size());
-        c.move(0, 0,0.5);
 
-        
         
     }
 }
