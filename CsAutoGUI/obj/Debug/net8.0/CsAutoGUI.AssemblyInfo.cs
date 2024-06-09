@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CsAutoGUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f37a27de9ca3b450c09d16b9539ceda0e1f421ac")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e087acecf501e46b77169ddd81b54598e5ab911f")]
 [assembly: System.Reflection.AssemblyProductAttribute("CsAutoGUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CsAutoGUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
