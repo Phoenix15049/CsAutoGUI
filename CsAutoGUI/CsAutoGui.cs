@@ -42,11 +42,15 @@ public class CsAutoGui
 
     public void moveTo(int x, int y, double Delay = 0.0, int steps = 100)
     {
-        double DelayInMs = Delay * 1000;
+        if (steps <= 0) return; // Ensure steps is positive
+        double DelayInMs = Delay * 1000; // Convert Delay to milliseconds
         Console.WriteLine("START");
+    
         GetCursorPos(out Point currentPoint);
-         
-        int sleepTime = (int)DelayInMs / steps;
+    
+        // Calculate the total sleep time for each step
+        int sleepTime = (int)(DelayInMs / steps); // Total delay divided by number of steps
+    
         for (int i = 0; i < steps; i++)
         {
             if (shouldStop) // Check if we should stop
@@ -58,8 +62,11 @@ public class CsAutoGui
             int tempX = currentPoint.X + (x - currentPoint.X) * i / steps;
             int tempY = currentPoint.Y + (y - currentPoint.Y) * i / steps;
             SetCursorPos(tempX, tempY);
+        
+            // Sleep for the calculated time for each step
             Thread.Sleep(sleepTime);
         }
+    
         SetCursorPos(x, y); // Ensure the cursor ends up at the exact spot
         Console.WriteLine("END");
     }
