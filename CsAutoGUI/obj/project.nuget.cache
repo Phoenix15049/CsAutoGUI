@@ -1,8 +1,60 @@
 {
   "version": 2,
-  "dgSpecHash": "tSNyBk3zh9M=",
+  "dgSpecHash": "pQWdCdaQqVY=",
   "success": true,
   "projectFilePath": "D:\\ProgrammingProjects\\C#Projects\\RiderProjects\\CsAutoGui\\CsAutoGUI\\CsAutoGUI.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\M.R.Yadollahi\\.nuget\\packages\\aforge\\2.2.5\\aforge.2.2.5.nupkg.sha512",
+    "C:\\Users\\M.R.Yadollahi\\.nuget\\packages\\aforge.imaging\\2.2.5\\aforge.imaging.2.2.5.nupkg.sha512",
+    "C:\\Users\\M.R.Yadollahi\\.nuget\\packages\\aforge.math\\2.2.5\\aforge.math.2.2.5.nupkg.sha512",
+    "C:\\Users\\M.R.Yadollahi\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.0\\microsoft.win32.systemevents.9.0.0.nupkg.sha512",
+    "C:\\Users\\M.R.Yadollahi\\.nuget\\packages\\opencvsharp\\2.4.0.1\\opencvsharp.2.4.0.1.nupkg.sha512",
+    "C:\\Users\\M.R.Yadollahi\\.nuget\\packages\\opencvsharp4\\4.10.0.20241108\\opencvsharp4.4.10.0.20241108.nupkg.sha512",
+    "C:\\Users\\M.R.Yadollahi\\.nuget\\packages\\opencvsharp4.runtime.win\\4.10.0.20241108\\opencvsharp4.runtime.win.4.10.0.20241108.nupkg.sha512",
+    "C:\\Users\\M.R.Yadollahi\\.nuget\\packages\\system.drawing.common\\9.0.0\\system.drawing.common.9.0.0.nupkg.sha512",
+    "C:\\Users\\M.R.Yadollahi\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\M.R.Yadollahi\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'AForge 2.2.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "AForge",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'AForge.Imaging 2.2.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "AForge.Imaging",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'AForge.Math 2.2.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "AForge.Math",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'OpenCVSharp 2.4.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "OpenCVSharp",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

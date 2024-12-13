@@ -1,14 +1,39 @@
-﻿namespace CsAutoGUI;
+﻿using OpenCvSharp;
+using System.Drawing;
+using System.Drawing.Imaging;
+using OpenCvSharp.CPlusPlus;
+
+namespace CsAutoGUI;
 using System.Runtime.InteropServices;
 using System.Drawing;
 using System.Threading;
 using System;
-using System.Runtime.InteropServices;
-using System.Threading;
-using System.Drawing;
+
+using System;
+using System.IO;
+
+using AForge.Imaging;
+using AForge.Imaging.Filters;
 
 public class CsAutoGui
 {
+    
+    [DllImport("user32.dll")]
+    static extern bool PrintWindow(IntPtr hWnd, IntPtr hdcBlt, uint nFlags);
+
+    [DllImport("user32.dll")]
+    static extern IntPtr GetDesktopWindow();
+    
+    
+    
+    [DllImport("user32.dll")]
+    static extern void mouse_event(uint dwFlags, int dx, int dy, uint dwData, int dwExtraInfo);
+    private const uint MOUSEEVENTF_LEFTDOWN = 0x0002;
+    private const uint MOUSEEVENTF_LEFTUP = 0x0004;
+    
+    
+    
+    
     private static double PAUSE = 0.0;
     private static volatile bool shouldStop = false; // Flag to indicate if we should stop
 
@@ -29,27 +54,27 @@ public class CsAutoGui
         keyMonitorThread.Start();
     }
 
-    public Point size()
+    public Point Size()
     {
         return new Point(GetSystemMetrics(0), GetSystemMetrics(1));
     }
     
-    public Point position()
+    public Point Position()
     {
         GetCursorPos(out Point point);
         return point;
     }
 
-    public void moveTo(int x, int y, double Delay = 0.0, int steps = 100)
+    public void MoveTo(int x, int y, double delay = 0.0, int steps = 64)
     {
         if (steps <= 0) return; // Ensure steps is positive
-        double DelayInMs = Delay * 1000; // Convert Delay to milliseconds
+        double delayInMs = delay * 1000; // Convert Delay to milliseconds
         Console.WriteLine("START");
     
         GetCursorPos(out Point currentPoint);
     
         // Calculate the total sleep time for each step
-        int sleepTime = (int)(DelayInMs / steps); // Total delay divided by number of steps
+        int sleepTime = (int)(delayInMs / steps); // Total delay divided by number of steps
     
         for (int i = 0; i < steps; i++)
         {
@@ -71,19 +96,18 @@ public class CsAutoGui
         Console.WriteLine("END");
     }
 
-    public bool onScreen(int x, int y)
+    public bool OnScreen(int x, int y)
     {
-        int screenx = size().X;
-        int screeny = size().Y;
+        int screenx = Size().X;
+        int screeny = Size().Y;
         return x <= screenx && y <= screeny && x >= 0 && y >= 0;
     }
 
-    public void Sleep(double Seconds)
+    public void Sleep(double seconds)
     {
-        double ms = Seconds * 1000;
+        double ms = seconds * 1000;
         Thread.Sleep((int)ms);
     }
-
     private void MonitorKeys()
     {
         while (true)
@@ -98,4 +122,44 @@ public class CsAutoGui
             Thread.Sleep(100); // Sleep a bit to avoid high CPU usage
         }
     }
+    
+    public void Click(int? x = null, int? y = null)
+    {
+        if (x.HasValue && y.HasValue)
+        {
+            MoveTo(x.Value, y.Value);
+        }
+
+        // کلیک موس
+        mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+        Thread.Sleep(50);  // مکث کوتاه
+        mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+    }
+
+    public void DoubleClick(int? x = null, int? y = null)
+    {
+        Click(x, y);
+        Thread.Sleep(50);
+        Click(x, y);
+    }
+    
+    public void TripleClick(int? x = null, int? y = null)
+    {
+        Click(x, y);
+        Thread.Sleep(50);
+        Click(x, y);
+        Thread.Sleep(50);
+        Click(x, y);
+    }
+
 }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    

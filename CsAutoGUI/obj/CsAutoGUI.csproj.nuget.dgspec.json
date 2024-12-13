@@ -48,6 +48,32 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "AForge": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "AForge.Imaging": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "OpenCVSharp": {
+              "target": "Package",
+              "version": "[2.4.0.1, )"
+            },
+            "OpenCvSharp4": {
+              "target": "Package",
+              "version": "[4.10.0.20241108, )"
+            },
+            "OpenCvSharp4.runtime.win": {
+              "target": "Package",
+              "version": "[4.10.0.20241108, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

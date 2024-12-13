@@ -13,4 +13,10 @@
     <SourceRoot Include="C:\Users\M.R.Yadollahi\.nuget\packages\" />
     <SourceRoot Include="G:\Visual Studio C\SDKs\NuGetPackages\" />
   </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)opencvsharp4.runtime.win\4.10.0.20241108\build\net5.0\OpenCvSharp4.runtime.win.props" Condition="Exists('$(NuGetPackageRoot)opencvsharp4.runtime.win\4.10.0.20241108\build\net5.0\OpenCvSharp4.runtime.win.props')" />
+  </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgOpenCVSharp Condition=" '$(PkgOpenCVSharp)' == '' ">C:\Users\M.R.Yadollahi\.nuget\packages\opencvsharp\2.4.0.1</PkgOpenCVSharp>
+  </PropertyGroup>
 </Project>

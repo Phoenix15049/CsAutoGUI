@@ -14,4 +14,13 @@
         </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="AForge" Version="2.2.5" />
+      <PackageReference Include="AForge.Imaging" Version="2.2.5" />
+      <PackageReference Include="OpenCVSharp" Version="2.4.0.1" />
+      <PackageReference Include="OpenCvSharp4" Version="4.10.0.20241108" />
+      <PackageReference Include="OpenCvSharp4.runtime.win" Version="4.10.0.20241108" />
+      <PackageReference Include="System.Drawing.Common" Version="9.0.0" />
+    </ItemGroup>
+
 </Project>
